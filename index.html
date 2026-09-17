@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bárbara de la Fuente — Portafolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">BF</div>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+    ☰
+  </button>
+
+  <nav id="navMenu">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section id="inicio" class="hero">
+    <img class="avatar" src="foto.jpg" alt="Foto de Bárbara de la Fuente">
+    <h1>Bárbara de la Fuente</h1>
+    <p class="tagline">Estudiante de Ingeniería Informática — aprendiendo a programar y construyendo mis primeros proyectos.</p>
+  </section>
+
+  <section id="sobre-mi" class="about">
+    <h2>Sobre mí</h2>
+    <p>
+      Soy estudiante de Ingeniería Informática en la Universidad Católica de Temuco, cursando actualmente primer año. 
+      Elegí esta carrera porque me interesa entender cómo funcionan los programas que uso todos los días.
+      Este portafolio es también algunos de mis proyectos reales de HTML, CSS y JavaScript
+    </p>
+    <a class="cv-link" href="cv.pdf" download>Descargar CV</a>
+  </section>
+
+  <section id="proyectos" class="projects">
+    <h2>Proyectos</h2>
+    <div class="project-grid">
+
+      <article class="project-card">
+        <img src="hannibal-web.jpg" alt="Captura de Hannibal Web">
+        <h3>Hannibal Web</h3>
+        <p>Página informativa sobre la serie Hannibal, con introducción a la trama y galería de personajes.</p>
+        <p class="tech">HTML5 · CSS3</p>
+        <a href="https://github.com/tu-usuario/hannibal-web" target="_blank" rel="noopener">Ver en GitHub</a>
+      </article>
+
+      <article class="project-card">
+        <img src="mundo-gatuno.jpg" alt="Captura de Mundo Gatuno">
+        <h3>Mundo Gatuno</h3>
+        <p>Página informativa sobre gatos: datos generales, razas exóticas y galería de fotos. Trabajado en equipo.</p>
+        <p class="tech">HTML5 · CSS3</p>
+        <a href="https://ericybarbara.vercel.app/" target="_blank" rel="noopener">Ver sitio en vivo</a>
+      </article>
+
+      <article class="project-card">
+        <img src="proyecto3.jpg" alt="Captura del proyecto 3">
+        <h3>Nombre del proyecto 3</h3>
+        <p>Descripción breve de qué hace este proyecto y qué problema resuelve.</p>
+        <p class="tech">Tecnologías usadas</p>
+        <a href="https://github.com/tu-usuario/proyecto3" target="_blank" rel="noopener">Ver en GitHub</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="habilidades" class="skills">
+    <h2>Habilidades</h2>
+    <ul class="skill-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Git / GitHub</li>
+      <li>VS Code</li>
+    </ul>
+  </section>
+
+  <section id="contacto" class="contact">
+    <h2>Contacto</h2>
+    <ul class="contact-list">
+      <li><a href="mailto:bdelafuente2025@alu.uct.cl">bdelafuente2025@alu.uct.cl</a></li>
+      <li><a href="https://github.com/tu-usuario" target="_blank" rel="noopener">github.com/tu-usuario</a></li>
+      <li><a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener">linkedin.com/in/tu-usuario</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Bárbara de la Fuente — hecho con HTML, CSS y JavaScript.</p>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
