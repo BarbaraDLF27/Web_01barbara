@@ -9,3 +9,8 @@ Atributos alt presentes en todas las imágenes y etiquetas <label> vinculadas a 
 Navegabilidad funcional mediante teclado (tecla Tab).
 
 Validación rápida con la herramienta Lighthouse (DevTools) alcanzando un puntaje adecuado en Accesibilidad.
+
+
+
+
+file:///C:/Users/yongo/Desktop/127.0.0.1_5500-20260916T233953.html
