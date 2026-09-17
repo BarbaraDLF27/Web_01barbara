@@ -190,6 +190,11 @@ section{
   color: var(--oro-viejo);
 }
 
+.project-card .project-links{
+  display: flex;
+  gap: 14px;
+}
+
 
 .skill-list{
   list-style: none;
