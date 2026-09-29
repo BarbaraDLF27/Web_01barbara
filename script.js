@@ -4,8 +4,8 @@ const navMenu = document.getElementById('navMenu');
 
 menuToggle.addEventListener('click', () => {
   const abierto = navMenu.classList.toggle('abierto');
-  // Actualiza el atributo de accesibilidad para lectores de pantalla
   menuToggle.setAttribute('aria-expanded', abierto);
+  menuToggle.setAttribute('aria-label', abierto ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
 });
 
 // Cierra el menú automáticamente al hacer clic en un enlace
@@ -30,5 +30,7 @@ window.addEventListener('scroll', () => {
 });
 
 backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  const reducirMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({ top: 0, behavior: reducirMovimiento ? 'auto' : 'smooth' });
 });
+

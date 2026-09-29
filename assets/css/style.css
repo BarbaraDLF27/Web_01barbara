@@ -1,21 +1,22 @@
-
 :root{
   --negro: #14110f;
   --carbon: #1c1917;
   --hueso: #e7ded0;
   --vino: #6e1f24;
-  --vino-brillo: #a8323d;
+  --vino-brillo: #d66b73;
   --oro-viejo: #9c8354;
   --gris: #5c564e;
-
   --fuente-titulo: Georgia, 'Times New Roman', serif;
   --fuente-cuerpo: 'Helvetica Neue', Arial, sans-serif;
+
 }
 
 
 *{
   box-sizing: border-box;
+
 }
+
 
 body{
   margin: 0;
@@ -23,29 +24,58 @@ body{
   color: var(--hueso);
   font-family: var(--fuente-cuerpo);
   line-height: 1.6;
+
 }
+
 
 h1, h2, h3{
   font-family: var(--fuente-titulo);
   font-weight: 400;
   margin: 0 0 16px;
-  color: var(--hueso);
+  color: var(--oro-viejo);
+
 }
+
 
 a{
   color: var(--vino-brillo);
   text-decoration: none;
+
 }
+
 
 a:hover{
   text-decoration: underline;
+
 }
+
+
+a:focus-visible,
+button:focus-visible{
+  outline: 3px solid var(--oro-viejo);
+  outline-offset: 4px;
+
+}
+
 
 section{
   padding: 60px 24px;
   max-width: 960px;
   margin: 0 auto;
-  scroll-margin-top: 70px; /* evita que el header fijo tape el título al hacer scroll con anclas */
+  text-align: center;
+  scroll-margin-top: 70px;
+
+}
+
+
+.divisor{
+  border: none;
+  height: 1px;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(to right, transparent, var(--vino-brillo), transparent);
+
 }
 
 
@@ -54,18 +84,25 @@ section{
   top: 0;
   z-index: 10;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 18px 24px;
   background: var(--carbon);
   border-bottom: 1px solid rgba(231,222,208,0.15);
+
 }
+
+
 
 .logo{
   font-family: var(--fuente-titulo);
   color: var(--oro-viejo);
   font-size: 1.2rem;
+
 }
+
+
 
 .menu-toggle{
   display: block;
@@ -75,16 +112,25 @@ section{
   font-size: 1.2rem;
   padding: 6px 12px;
   cursor: pointer;
+
 }
+
+
 
 .site-header nav{
   display: none;
   width: 100%;
+
 }
+
+
 
 .site-header nav.abierto{
   display: block;
+
 }
+
+
 
 .site-header nav ul{
   list-style: none;
@@ -93,64 +139,56 @@ section{
   gap: 14px;
   margin: 18px 0 0;
   padding: 0;
+
 }
+
+
 
 .site-header nav a{
   color: var(--hueso);
   font-size: 0.95rem;
   letter-spacing: 0.02em;
+
 }
+
+
 
 .site-header nav a:hover{
   color: var(--vino-brillo);
   text-decoration: none;
+
 }
 
 
 .hero{
   text-align: center;
   padding-top: 80px;
+
 }
 
-.avatar{
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--oro-viejo);
-  margin-bottom: 22px;
-}
 
 .hero h1{
   font-size: clamp(1.8rem, 4vw, 2.6rem);
+
 }
+
 
 .hero .tagline{
   color: rgba(231,222,208,0.75);
   font-size: 1.05rem;
   max-width: 480px;
   margin: 0 auto;
+
 }
 
 
 .about p{
   max-width: 640px;
+  margin: 0 auto;
   color: rgba(231,222,208,0.85);
-}
 
-.cv-link{
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  border: 1px solid var(--oro-viejo);
-  color: var(--oro-viejo);
-}
+} 
 
-.cv-link:hover{
-  background: var(--oro-viejo);
-  color: var(--negro);
-  text-decoration: none;
-}
 
 
 .project-grid{
@@ -158,41 +196,54 @@ section{
   grid-template-columns: 1fr;
   gap: 24px;
   margin-top: 24px;
+
 }
 
 .project-card{
   background: var(--carbon);
   padding: 20px;
   border: 1px solid rgba(231,222,208,0.1);
+
 }
+
 
 .project-card img{
   width: 100%;
-  height: 160px;
-  object-fit: cover;
+  height: auto;
+  display: block;
   margin-bottom: 14px;
   background: rgba(231,222,208,0.05);
+
 }
+
 
 .project-card h3{
   font-size: 1.1rem;
   margin-bottom: 8px;
+
 }
+
 
 .project-card p{
   font-size: 0.92rem;
   color: rgba(231,222,208,0.75);
   margin: 0 0 10px;
+
 }
+
 
 .project-card .tech{
   font-size: 0.78rem;
   color: var(--oro-viejo);
+
 }
+
 
 .project-card .project-links{
   display: flex;
+  justify-content: center;
   gap: 14px;
+
 }
 
 
@@ -200,10 +251,13 @@ section{
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   margin: 24px 0 0;
   padding: 0;
+
 }
+
 
 .skill-list li{
   background: var(--carbon);
@@ -211,6 +265,14 @@ section{
   color: var(--hueso);
   padding: 8px 16px;
   font-size: 0.9rem;
+  transition: transform 0.25s ease;
+
+}
+
+
+.skill-list li:hover{
+  transform: translateY(-6px);
+
 }
 
 
@@ -219,21 +281,28 @@ section{
   padding: 0;
   margin: 24px 0 0;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
 }
+
 
 .contact-list a{
   font-size: 0.98rem;
+
 }
+
 
 
 .site-footer{
   text-align: center;
   padding: 24px;
   font-size: 0.82rem;
-  color: rgba(231,222,208,0.45);
+  color: rgba(231,222,208,0.72);
   border-top: 1px solid rgba(231,222,208,0.1);
+
 }
 
 
@@ -253,23 +322,43 @@ section{
   visibility: hidden;
   transform: translateY(10px);
   transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+
 }
+
 
 .back-to-top.visible{
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+
 }
+
+
 
 .back-to-top:hover{
   background: var(--oro-viejo);
   color: var(--negro);
+
+}
+
+
+@media (prefers-reduced-motion: reduce){
+  *,
+  *::before,
+  *::after{
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
 
 
 @media (min-width: 700px){
+
   .site-header{
     padding: 18px 48px;
+    flex-wrap: nowrap;
   }
 
   .menu-toggle{
@@ -288,6 +377,53 @@ section{
   }
 
   .project-grid{
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
   }
+
+}
+
+
+@media (min-width: 1024px){
+
+  .site-header{
+    padding: 22px 80px;
+  }
+
+  .site-header nav ul{
+    gap: 36px;
+  }
+
+  section{
+    padding: 90px 24px;
+  }
+
+  .hero{
+    padding-top: 120px;
+  }
+
+  .project-grid{
+    max-width: 900px;
+    gap: 40px;
+  }
+
+  .project-card{
+    padding: 28px;
+  }
+
+  .project-card h3{
+    font-size: 1.3rem;
+  }
+
+  .project-card p{
+    font-size: 1rem;
+  }
+
+  .skill-list li{
+    padding: 10px 22px;
+    font-size: 1rem;
+  }
+
 }
